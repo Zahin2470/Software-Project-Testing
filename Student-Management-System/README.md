@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-# Student Management System
+# JUnit Testing: Student Management System
 
 ## Overview
 
@@ -115,6 +114,6 @@ The system ensures all inputs are valid:
 ---
 
 ## Enjoy managing your students with ease! 🚀
+
 =======
 # Test Software Quality Assurance
->>>>>>> 76b4e70d9a0de5da1c5f1af923ce84bf979b34da
