@@ -1,0 +1,276 @@
+
+
+================ Manual Test Runner: Student Management System ================
+
+
+----------------------------------------------------------------
+TC-001 Add student (valid) & countTotalStudents()
+
+The Total number of students: 2
+
+
+
+Result hint: PASS
+----------------------------------------------------------------
+
+----------------------------------------------------------------
+TC-003 Remove student & searchByID(not found)
+
+Student not found!
+
+
+
+Result hint: PASS
+----------------------------------------------------------------
+
+----------------------------------------------------------------
+TC-005 Update GPA & calculateAverageGPA()
+
+The Average GPA: 3.50
+
+
+
+Result hint: PASS
+----------------------------------------------------------------
+
+----------------------------------------------------------------
+TC-006 listAndSortAllStudents("Name")
+
+
+List of Students:
+Name                  |  ID        |  GPA   |  Year    |  Department
+---------------------------------------------------------------------
+A                     |  5         |  3.90  |  Third   |  Gen  
+X                     |  10        |  3.10  |  Third   |  Gen  
+
+
+
+Result hint: PASS
+----------------------------------------------------------------
+
+----------------------------------------------------------------
+TC-007 filterByGPA(2.5)
+
+Students with GPA of 2.5:
+Name                  |  ID        |  GPA   |  Year    |  Dept 
+------------------------------------------------------------------
+MidGPA                |  4002      |  2.50  |  Third   |  CSE  
+
+
+
+Result hint: PASS
+----------------------------------------------------------------
+
+----------------------------------------------------------------
+TC-008 filterByYear("Third")
+
+Students in Third year:
+Name                  |  ID        |  GPA   |  Year    |  Dept 
+------------------------------------------------------------------
+Y3                    |  5002      |  3.20  |  Third   |  GEN  
+
+
+
+Result hint: PASS
+----------------------------------------------------------------
+
+----------------------------------------------------------------
+TC-009 filterByDepartment("CSE")
+
+Students in CSE department:
+Name                  |  ID        |  GPA   |  Year    |  Dept 
+------------------------------------------------------------------
+InCSE                 |  6001      |  3.60  |  Third   |  CSE  
+
+
+
+Result hint: PASS
+----------------------------------------------------------------
+
+----------------------------------------------------------------
+TC-010 displayFailingStudents()
+
+-------------------- FAILING STUDENTS (who have GPA less than 2.0) --------------------
+
+First Year:
+ Name                  |  ID        |  GPA   |  Year    |  Department
+----------------------------------------------------------------------
+ No failing students found!
+
+Second Year:
+ Name                  |  ID        |  GPA   |  Year    |  Department
+----------------------------------------------------------------------
+ No failing students found!
+
+Third Year:
+ Name                  |  ID        |  GPA   |  Year    |  Department
+----------------------------------------------------------------------
+ Failing1              |  7001      |  1.20  |  Third   |  CSE  
+
+Fourth Year:
+ Name                  |  ID        |  GPA   |  Year    |  Department
+----------------------------------------------------------------------
+ No failing students found!
+
+
+
+
+Result hint: PASS
+----------------------------------------------------------------
+
+----------------------------------------------------------------
+TC-011 displayTop5()
+
+------------------------------ TOP 5 PERFORMING STUDENTS ------------------------------
+
+First Year:
+ Name                     |  ID        |  GPA   |  Year    |  Department
+-------------------------------------------------------------------------
+ No students found!
+
+Second Year:
+ Name                     |  ID        |  GPA   |  Year    |  Department
+-------------------------------------------------------------------------
+ No students found!
+
+Third Year:
+ Name                     |  ID        |  GPA   |  Year    |  Department
+-------------------------------------------------------------------------
+ No students found!
+
+Fourth Year:
+ Name                     |  ID        |  GPA   |  Year    |  Department
+-------------------------------------------------------------------------
+ 1. S1                    |  8001      |  4.00  |  Fourth  |  CSE  
+ 2. S2                    |  8002      |  3.90  |  Fourth  |  CSE  
+ 3. S3                    |  8003      |  3.80  |  Fourth  |  CSE  
+ 4. S4                    |  8004      |  3.70  |  Fourth  |  CSE  
+ 5. S5                    |  8005      |  3.60  |  Fourth  |  CSE  
+
+
+
+Result hint: PASS
+----------------------------------------------------------------
+
+----------------------------------------------------------------
+TC-012 generateSummary()
+
+
+------------------------------ CLASS PERFORMANCE ------------------------------
+
+The Average GPA: 3.40
+
+The Total number of students: 2
+
+Year-wise Student Count:
+ - First Year: 0, With Success rate of NaN%
+ - Second Year: 0, With Success rate of NaN%
+ - Third Year: 2, With Success rate of 100.000%
+ - Fourth Year: 0, With Success rate of NaN%
+
+------------------------------ TOP 5 PERFORMING STUDENTS ------------------------------
+
+First Year:
+ Name                     |  ID        |  GPA   |  Year    |  Department
+-------------------------------------------------------------------------
+ No students found!
+
+Second Year:
+ Name                     |  ID        |  GPA   |  Year    |  Department
+-------------------------------------------------------------------------
+ No students found!
+
+Third Year:
+ Name                     |  ID        |  GPA   |  Year    |  Department
+-------------------------------------------------------------------------
+ 1. SumB                  |  9002      |  3.70  |  Third   |  EEE  
+ 2. SumA                  |  9001      |  3.10  |  Third   |  CSE  
+
+Fourth Year:
+ Name                     |  ID        |  GPA   |  Year    |  Department
+-------------------------------------------------------------------------
+ No students found!
+
+-------------------- FAILING STUDENTS (who have GPA less than 2.0) --------------------
+
+First Year:
+ Name                  |  ID        |  GPA   |  Year    |  Department
+----------------------------------------------------------------------
+ No failing students found!
+
+Second Year:
+ Name                  |  ID        |  GPA   |  Year    |  Department
+----------------------------------------------------------------------
+ No failing students found!
+
+Third Year:
+ Name                  |  ID        |  GPA   |  Year    |  Department
+----------------------------------------------------------------------
+ No failing students found!
+
+Fourth Year:
+ Name                  |  ID        |  GPA   |  Year    |  Department
+----------------------------------------------------------------------
+ No failing students found!
+
+
+
+
+Result hint: PASS
+----------------------------------------------------------------
+
+----------------------------------------------------------------
+TC-013 searchByID(found)
+
+Student found!
+Name                  |  ID        |  GPA   |  Year    |  Dept 
+------------------------------------------------------------------
+SearchMe              |  10001     |  3.30  |  Third   |  CSE  
+
+
+
+Result hint: PASS
+----------------------------------------------------------------
+
+----------------------------------------------------------------
+TC-013 searchByID(not found)
+
+Student not found!
+
+
+
+Result hint: PASS
+----------------------------------------------------------------
+
+----------------------------------------------------------------
+TC-014 mergeStudentSystem()
+
+Student found!
+Name                  |  ID        |  GPA   |  Year    |  Dept 
+------------------------------------------------------------------
+OtherB                |  11002     |  3.80  |  Fourth  |  EEE  
+
+
+
+Result hint: PASS
+----------------------------------------------------------------
+
+----------------------------------------------------------------
+TC-015 InputValidator.inputValidGPA(3.75)
+
+Returned GPA: 3.75
+
+Result hint: PASS
+----------------------------------------------------------------
+
+----------------------------------------------------------------
+TC-016 InputValidator.inputValidGPA(invalid then 3.2)
+
+Returned GPA: 3.2
+
+Result hint: PASS
+----------------------------------------------------------------
+
+
+================ End of tests ================
+
