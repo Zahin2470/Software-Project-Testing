@@ -1,0 +1,16 @@
+# Java / Maven / Gradle
+target/
+build/
+*.class
+*.jar
+
+# IDE/editor
+.vscode/
+.idea/
+*.iml
+
+# macOS
+.DS_Store
+
+# logs, temp
+*.log

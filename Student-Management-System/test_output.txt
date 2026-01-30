@@ -1,0 +1,317 @@
+Student added successfully!
+
+--------------------------------------------------
+JUnit Test: (unknown test)
+Captured Output:
+Found output:
+Student found!
+Name                  |  ID        |  GPA   |  Year    |  Dept 
+------------------------------------------------------------------
+SearchMe              |  10001     |  3.30  |  Third   |  CSE  
+
+
+NotFound output:
+Student not found!
+
+
+--------------------------------------------------
+
+Student added successfully!
+
+Student added successfully!
+
+--------------------------------------------------
+JUnit Test: (unknown test)
+Captured Output:
+Students in Third year:
+Name                  |  ID        |  GPA   |  Year    |  Dept 
+------------------------------------------------------------------
+Y3                    |  5002      |  3.20  |  Third   |  GEN  
+
+
+--------------------------------------------------
+
+Student added successfully!
+
+Student added successfully!
+
+Student added successfully!
+
+--------------------------------------------------
+JUnit Test: (unknown test)
+Captured Output:
+Students with GPA of 2.5:
+Name                  |  ID        |  GPA   |  Year    |  Dept 
+------------------------------------------------------------------
+MidGPA                |  4002      |  2.50  |  Third   |  CSE  
+
+
+--------------------------------------------------
+
+Student added successfully!
+
+Student added successfully!
+
+Student system merged successfully!
+
+--------------------------------------------------
+JUnit Test: (unknown test)
+Captured Output:
+Student found!
+Name                  |  ID        |  GPA   |  Year    |  Dept 
+------------------------------------------------------------------
+OtherB                |  11002     |  3.80  |  Fourth  |  EEE  
+
+
+--------------------------------------------------
+
+Student added successfully!
+
+Student added successfully!
+
+--------------------------------------------------
+JUnit Test: (unknown test)
+Captured Output:
+
+List of Students:
+Name                  |  ID        |  GPA   |  Year    |  Department
+---------------------------------------------------------------------
+A                     |  5         |  3.90  |  Third   |  Gen  
+X                     |  10        |  3.10  |  Third   |  Gen  
+
+
+--------------------------------------------------
+
+Student added successfully!
+
+Student added successfully!
+
+--------------------------------------------------
+JUnit Test: (unknown test)
+Captured Output:
+-------------------- FAILING STUDENTS (who have GPA less than 2.0) --------------------
+
+First Year:
+ Name                  |  ID        |  GPA   |  Year    |  Department
+----------------------------------------------------------------------
+ No failing students found!
+
+Second Year:
+ Name                  |  ID        |  GPA   |  Year    |  Department
+----------------------------------------------------------------------
+ No failing students found!
+
+Third Year:
+ Name                  |  ID        |  GPA   |  Year    |  Department
+----------------------------------------------------------------------
+ Failing1              |  7001      |  1.20  |  Third   |  CSE  
+
+Fourth Year:
+ Name                  |  ID        |  GPA   |  Year    |  Department
+----------------------------------------------------------------------
+ No failing students found!
+
+
+
+--------------------------------------------------
+
+Student added successfully!
+
+Student added successfully!
+
+--------------------------------------------------
+JUnit Test: (unknown test)
+Captured Output:
+Students in CSE department:
+Name                  |  ID        |  GPA   |  Year    |  Dept 
+------------------------------------------------------------------
+InCSE                 |  6001      |  3.60  |  Third   |  CSE  
+
+
+--------------------------------------------------
+
+Student added successfully!
+
+Student added successfully!
+
+Student added successfully!
+
+Student added successfully!
+
+Student added successfully!
+
+Student added successfully!
+
+--------------------------------------------------
+JUnit Test: (unknown test)
+Captured Output:
+------------------------------ TOP 5 PERFORMING STUDENTS ------------------------------
+
+First Year:
+ Name                     |  ID        |  GPA   |  Year    |  Department
+-------------------------------------------------------------------------
+ No students found!
+
+Second Year:
+ Name                     |  ID        |  GPA   |  Year    |  Department
+-------------------------------------------------------------------------
+ No students found!
+
+Third Year:
+ Name                     |  ID        |  GPA   |  Year    |  Department
+-------------------------------------------------------------------------
+ No students found!
+
+Fourth Year:
+ Name                     |  ID        |  GPA   |  Year    |  Department
+-------------------------------------------------------------------------
+ 1. S1                    |  8001      |  4.00  |  Fourth  |  CSE  
+ 2. S2                    |  8002      |  3.90  |  Fourth  |  CSE  
+ 3. S3                    |  8003      |  3.80  |  Fourth  |  CSE  
+ 4. S4                    |  8004      |  3.70  |  Fourth  |  CSE  
+ 5. S5                    |  8005      |  3.60  |  Fourth  |  CSE  
+
+
+--------------------------------------------------
+
+Student added successfully!
+
+Student added successfully!
+
+Student updated successfully!
+
+--------------------------------------------------
+JUnit Test: (unknown test)
+Captured Output:
+The Average GPA: 3.50
+
+
+--------------------------------------------------
+
+Student added successfully!
+
+Student added successfully!
+
+--------------------------------------------------
+JUnit Test: (unknown test)
+Captured Output:
+
+------------------------------ CLASS PERFORMANCE ------------------------------
+
+The Average GPA: 3.40
+
+The Total number of students: 2
+
+Year-wise Student Count:
+ - First Year: 0, With Success rate of NaN%
+ - Second Year: 0, With Success rate of NaN%
+ - Third Year: 2, With Success rate of 100.000%
+ - Fourth Year: 0, With Success rate of NaN%
+
+------------------------------ TOP 5 PERFORMING STUDENTS ------------------------------
+
+First Year:
+ Name                     |  ID        |  GPA   |  Year    |  Department
+-------------------------------------------------------------------------
+ No students found!
+
+Second Year:
+ Name                     |  ID        |  GPA   |  Year    |  Department
+-------------------------------------------------------------------------
+ No students found!
+
+Third Year:
+ Name                     |  ID        |  GPA   |  Year    |  Department
+-------------------------------------------------------------------------
+ 1. SumB                  |  9002      |  3.70  |  Third   |  EEE  
+ 2. SumA                  |  9001      |  3.10  |  Third   |  CSE  
+
+Fourth Year:
+ Name                     |  ID        |  GPA   |  Year    |  Department
+-------------------------------------------------------------------------
+ No students found!
+
+-------------------- FAILING STUDENTS (who have GPA less than 2.0) --------------------
+
+First Year:
+ Name                  |  ID        |  GPA   |  Year    |  Department
+----------------------------------------------------------------------
+ No failing students found!
+
+Second Year:
+ Name                  |  ID        |  GPA   |  Year    |  Department
+----------------------------------------------------------------------
+ No failing students found!
+
+Third Year:
+ Name                  |  ID        |  GPA   |  Year    |  Department
+----------------------------------------------------------------------
+ No failing students found!
+
+Fourth Year:
+ Name                  |  ID        |  GPA   |  Year    |  Department
+----------------------------------------------------------------------
+ No failing students found!
+
+
+
+--------------------------------------------------
+
+Student added successfully!
+
+Student added successfully!
+
+--------------------------------------------------
+JUnit Test: (unknown test)
+Captured Output:
+The Total number of students: 2
+
+
+--------------------------------------------------
+
+Student added successfully!
+
+Student removed successfully!
+
+--------------------------------------------------
+JUnit Test: (unknown test)
+Captured Output:
+Student not found!
+
+
+--------------------------------------------------
+
+
+Thanks for using JUnit! Support its development at https://junit.org/sponsoring
+
+╷
+├─ JUnit Jupiter ✔
+│  └─ StudentSystemUnitTest ✔
+│     ├─ testSearchByID_foundAndNotFound() ✔
+│     ├─ testFilterByYear() ✔
+│     ├─ testFilterByGPA() ✔
+│     ├─ testMergeStudentSystem() ✔
+│     ├─ testListAndSortOutputs() ✔
+│     ├─ testDisplayFailingStudents() ✔
+│     ├─ testFilterByDepartment() ✔
+│     ├─ testDisplayTop5() ✔
+│     ├─ testUpdateGPAAndAverage() ✔
+│     ├─ testGenerateSummary_nonEmpty() ✔
+│     ├─ testAddAndCount() ✔
+│     └─ testRemoveAndSearchNotFound() ✔
+├─ JUnit Vintage ✔
+└─ JUnit Platform Suite ✔
+
+Test run finished after 89 ms
+[         4 containers found      ]
+[         0 containers skipped    ]
+[         4 containers started    ]
+[         0 containers aborted    ]
+[         4 containers successful ]
+[         0 containers failed     ]
+[        12 tests found           ]
+[         0 tests skipped         ]
+[        12 tests started         ]
+[         0 tests aborted         ]
+[        12 tests successful      ]
+[         0 tests failed          ]
