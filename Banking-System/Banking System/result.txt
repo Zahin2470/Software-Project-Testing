@@ -1,0 +1,186 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -----------------------< Bank_src:BankingSystem >-----------------------
+[INFO] Building BankingSystem 1.0-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.2.0:clean (default-clean) @ BankingSystem ---
+[INFO] Deleting /Users/md.abrarhossainzahin/Desktop/Software-Project-Testing/Banking-System/Banking System/target
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ BankingSystem ---
+[INFO] skip non existing resourceDirectory /Users/md.abrarhossainzahin/Desktop/Software-Project-Testing/Banking-System/Banking System/src/main/resources
+[INFO] 
+[INFO] --- compiler:3.13.0:compile (default-compile) @ BankingSystem ---
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 15 source files with javac [debug release 11] to target/classes
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ BankingSystem ---
+[INFO] skip non existing resourceDirectory /Users/md.abrarhossainzahin/Desktop/Software-Project-Testing/Banking-System/Banking System/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.13.0:testCompile (default-testCompile) @ BankingSystem ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 10 source files with javac [debug release 11] to target/test-classes
+[INFO] 
+[INFO] --- surefire:3.1.2:test (default-test) @ BankingSystem ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running Bank_src.CheckingAccountTest
+[SETUP] Creating CheckingAccount with overdraft 50.0
+[TEST START] withdraw_beyond_overdraft_shouldThrow
+  -> Deposited 100
+[TEST PASS] InsufficientFundsException thrown as expected
+[SETUP] Creating CheckingAccount with overdraft 50.0
+[TEST START] withdraw_negative_shouldThrowInvalidAmount
+[TEST PASS] InvalidAmountException thrown for negative withdrawal
+[SETUP] Creating CheckingAccount with overdraft 50.0
+[TEST START] withdraw_exact_balance_shouldResultZero
+  -> Deposited 200
+  -> Withdrew 200
+[TEST PASS] Balance after withdrawal = 0.0
+[SETUP] Creating CheckingAccount with overdraft 50.0
+[TEST START] withdraw_using_full_overdraft_shouldSucceed
+  -> Deposited 100
+  -> Withdrew 150 (including overdraft)
+[TEST PASS] Balance after overdraft = -50.0
+[SETUP] Creating CheckingAccount with overdraft 50.0
+[TEST START] deposit_zero_shouldThrowInvalidAmount
+[TEST PASS] InvalidAmountException thrown for zero deposit
+[SETUP] Creating CheckingAccount with overdraft 50.0
+[TEST START] withdraw_zero_shouldThrowInvalidAmount
+[TEST PASS] InvalidAmountException thrown for zero withdrawal
+[SETUP] Creating CheckingAccount with overdraft 50.0
+[TEST START] deposit_negative_shouldThrowInvalidAmount
+[TEST PASS] InvalidAmountException thrown for negative deposit
+[INFO] Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.035 s -- in Bank_src.CheckingAccountTest
+[INFO] Running Bank_src.SavingsAccountTest
+[SETUP] Creating SavingsAccount with interest rate 5%
+[TEST START] withdraw_more_than_balance_shouldThrow
+  -> Deposited 100
+[TEST PASS] InsufficientFundsException thrown as expected
+[SETUP] Creating SavingsAccount with interest rate 5%
+[TEST START] calculateInterest_shouldReturnBalanceTimesRate
+  -> Deposited 1000
+  -> Calculated interest = 50.0
+[TEST PASS] Interest correctly calculated
+[SETUP] Creating SavingsAccount with interest rate 5%
+[TEST START] deposit_negative_shouldThrow
+[TEST PASS] InvalidAmountException thrown for negative deposit
+[SETUP] Creating SavingsAccount with interest rate 5%
+[TEST START] withdraw_exact_balance_shouldSucceed
+  -> Deposited 500
+  -> Withdrew 500
+[TEST PASS] Balance after withdrawal = 0.0
+[INFO] Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 s -- in Bank_src.SavingsAccountTest
+[INFO] Running Bank_src.TransactionTest
+[TEST START] deposit_and_withdrawal_creation_shouldWork
+  -> Created Deposit with amount = 100.0
+  -> Deposit type = Deposit
+  -> Created Withdrawal with amount = 50.0
+  -> Withdrawal type = Withdrawal
+[TEST PASS] deposit_and_withdrawal_creation_shouldWork
+[TEST START] transaction_nonPositiveAmount_shouldThrow
+  -> Attempting Deposit(0)
+  -> Attempting Withdrawal(-5)
+[TEST PASS] transaction_nonPositiveAmount_shouldThrow
+[TEST START] transaction_toString_containsAmountAndType
+  -> toString() output: Deposit: $123.45 at 2026-02-15T01:46:23.924363
+[TEST PASS] transaction_toString_containsAmountAndType
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.011 s -- in Bank_src.TransactionTest
+[INFO] Running Bank_src.LoanAccountTest
+[TEST START] outstandingLoan_and_payments_shouldBehave
+  -> Created LoanAccount L100 with principal=1000.0 and rate=0.05
+  -> getBalance() = -1000.0
+  -> getOutstandingLoan() = 1000.0
+  -> initial assertions passed
+  -> Deposited 200 to loan account
+  -> getOutstandingLoan() after payment = 800.0
+[TEST PASS] outstandingLoan_and_payments_shouldBehave - outstanding reduced to 800.0
+[TEST START] constructor_negativeLoan_shouldThrow
+  -> Negative principal correctly rejected
+  -> Negative interest rate correctly rejected
+[TEST PASS] constructor_negativeLoan_shouldThrow
+[TEST START] withdraw_from_loanAccount_shouldThrowInvalidAmount
+  -> Created LoanAccount L200 with principal=500.0
+  -> withdraw(10) correctly threw InvalidAmountException
+[TEST PASS] withdraw_from_loanAccount_shouldThrowInvalidAmount
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 s -- in Bank_src.LoanAccountTest
+[INFO] Running Bank_src.TransactionHistoryTest
+[TEST START] add_null_transaction_shouldBeIgnored
+  -> Attempted to add null transaction
+  -> Current transaction count = 0
+[TEST PASS] Null transaction correctly ignored
+[TEST START] add_and_get_transactions_shouldReturnList
+  -> Added Deposit(50)
+  -> Added Withdrawal(10)
+  -> Current transaction count = 2
+[TEST PASS] Transactions stored and retrieved correctly
+[TEST START] printHistory_shouldNotThrow
+  -> Added Deposit(25)
+Deposit: $25.0 at 2026-02-15T01:46:23.933338
+  -> printHistory() executed without exception
+[TEST PASS] printHistory_shouldNotThrow
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 s -- in Bank_src.TransactionHistoryTest
+[INFO] Running Bank_src.BankEmployeeTest
+Running getters_shouldReturnValues
+getters_shouldReturnValues finished, employeeId=E001
+Running constructor_nulls_shouldThrow
+constructor_nulls_shouldThrow finished
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 s -- in Bank_src.BankEmployeeTest
+[INFO] Running Bank_src.CustomerContactAddressTest
+[TEST START] contactinfo_nulls_shouldThrow
+  -> Null phone rejected
+  -> Null email rejected
+[TEST PASS] contactinfo_nulls_shouldThrow
+[TEST START] address_null_fields_shouldThrow
+  -> Null street rejected
+  -> Null city rejected
+  -> Null ZIP rejected
+[TEST PASS] address_null_fields_shouldThrow
+[TEST START] customer_null_or_blank_shouldThrow
+  -> Null ID rejected
+  -> Blank name rejected
+  -> Null address rejected
+  -> Null contact rejected
+[TEST PASS] customer_null_or_blank_shouldThrow
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 s -- in Bank_src.CustomerContactAddressTest
+[INFO] Running Bank_src.ExceptionsSanityTest
+[TEST START] insufficientFundsException
+[TEST PASS] insufficientFundsException - message: no funds
+[TEST START] invalidAmountException_is_instantiable
+[TEST PASS] invalidAmountException_is_instantiable - message: msg
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.003 s -- in Bank_src.ExceptionsSanityTest
+[INFO] Running Bank_src.BankTest
+[SETUP] Preparing bank, customer and account for test...
+[TEST START] getCustomer_notFound_shouldThrow
+[TEST PASS] getCustomer_notFound_shouldThrow - NoSuchElementException thrown as expected
+[SETUP] Preparing bank, customer and account for test...
+[TEST START] open_nullAccount_shouldThrow
+[TEST PASS] open_nullAccount_shouldThrow - opening null account threw IllegalArgumentException
+[SETUP] Preparing bank, customer and account for test...
+[TEST START] getAccountsByCustomer_shouldReturnList
+[TEST PASS] getAccountsByCustomer_shouldReturnList - accounts.size=1
+[SETUP] Preparing bank, customer and account for test...
+[TEST START] register_duplicateCustomer_shouldThrow
+  -> First registration done for CU1
+[TEST PASS] register_duplicateCustomer_shouldThrow - duplicate registration threw IllegalArgumentException
+[SETUP] Preparing bank, customer and account for test...
+[TEST START] registerCustomer_and_openAccount_valid_shouldSucceed
+  -> Registered customer CU1
+  -> Opened account AC1
+[TEST PASS] registerCustomer_and_openAccount_valid_shouldSucceed - fetched=AC1
+[INFO] Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.004 s -- in Bank_src.BankTest
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 32, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  1.425 s
+[INFO] Finished at: 2026-02-15T01:46:23+06:00
+[INFO] ------------------------------------------------------------------------

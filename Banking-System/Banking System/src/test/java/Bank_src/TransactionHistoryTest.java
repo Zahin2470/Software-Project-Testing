@@ -11,26 +11,50 @@ public class TransactionHistoryTest {
 
     @Test
     void add_null_transaction_shouldBeIgnored() {
+        System.out.println("[TEST START] add_null_transaction_shouldBeIgnored");
+
         TransactionHistory th = new TransactionHistory();
         th.addTransaction(null);
-        List transactions = th.getTransactions();
+        System.out.println("  -> Attempted to add null transaction");
+
+        List<Transaction> transactions = th.getTransactions();
+        System.out.println("  -> Current transaction count = " + transactions.size());
+
         assertNotNull(transactions);
         assertEquals(0, transactions.size());
+
+        System.out.println("[TEST PASS] Null transaction correctly ignored");
     }
 
     @Test
     void add_and_get_transactions_shouldReturnList() {
+        System.out.println("[TEST START] add_and_get_transactions_shouldReturnList");
+
         TransactionHistory th = new TransactionHistory();
         th.addTransaction(new Deposit(50));
+        System.out.println("  -> Added Deposit(50)");
         th.addTransaction(new Withdrawal(10));
-        List transactions = th.getTransactions();
+        System.out.println("  -> Added Withdrawal(10)");
+
+        List<Transaction> transactions = th.getTransactions();
+        System.out.println("  -> Current transaction count = " + transactions.size());
+
         assertEquals(2, transactions.size());
+
+        System.out.println("[TEST PASS] Transactions stored and retrieved correctly");
     }
 
     @Test
     void printHistory_shouldNotThrow() {
+        System.out.println("[TEST START] printHistory_shouldNotThrow");
+
         TransactionHistory th = new TransactionHistory();
         th.addTransaction(new Deposit(25));
-        th.printHistory(); // just ensure no exception (side-effect: prints to console)
+        System.out.println("  -> Added Deposit(25)");
+
+        assertDoesNotThrow(() -> th.printHistory());
+        System.out.println("  -> printHistory() executed without exception");
+
+        System.out.println("[TEST PASS] printHistory_shouldNotThrow");
     }
 }
